@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer with htmx</title>
+    <script src="https://unpkg.com/htmx.org/dist/htmx.js"></script>
+</head>
+<body>
+    <h1>PDF Viewer with htmx</h1>
+    <form hx-get="https://raw.githubusercontent.com/degoes-consulting/lambdaconf-2015/master/speakers/jdegoes/intro-purescript/presentation.pdf" hx-request='{"noHeaders": true}' hx-trigger="load" hx-target="#pdf-container">
+        <button type="submit">Load PDF</button>
+    </form>
+    <div id="pdf-container"></div>
+</body>
+</html>
