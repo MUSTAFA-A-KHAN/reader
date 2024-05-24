@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>External Page</title>
+  <script src="https://unpkg.com/htmx.org"></script>
+  <script src="https://unpkg.com/htmx.org@1.9.12/dist/ext/client-side-templates.js"></script>
+  <script src="https://unpkg.com/mustache@latest"></script>
+</head>
+<body>
+  <div hx-ext="client-side-templates">
+    <button hx-get="https://raw.githubusercontent.com/MUSTAFA-A-KHAN/pdf-Index/main/pdf.json"
+            hx-swap="outerHTML"
+            hx-target="#pdf"
+            hx-request='{"noHeaders": true}'
+            mustache-array-template="foo"
+            class="bg-red-800 text-white px-4 py-2 rounded-md ml-10 hover:bg-transparent">
+      press here to view documents
+    </button>
+
+    <p id="pdf"></p>
+
+    <template id="foo">
+      {{#data}}
+      <p>{{id}}</p>
+       <div>
+        <iframe src="{{url}}" width="100%" height="500px" style="border: none;"></iframe>
+      </div>
+      {{/data}}
+    </template>
+  </div>
+  
+</body>
+</html>

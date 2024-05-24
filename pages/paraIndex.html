@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer with Google Docs Viewer</title>
+    <!-- Include htmx library -->
+    <script src="https://unpkg.com/htmx.org/dist/htmx.js"></script>
+    <link href="/style/output.css" rel="stylesheet">
+</head>
+<body>
+<div>
+    <div>
+
+    <button name="q" hx-swap="innerHTML" hx-get="/pages/paras/home.html" hx-trigger="click" hx-target="#pdfcontent" class="bg-red-800 text-white px-4 py-2 rounded-md ml-auto hover:bg-transparent" >Para1</button>
+    <button name="q" hx-swap="innerHTML" hx-get="/pages/paras/home.html" hx-trigger="click" hx-target="#pdfcontent" class="bg-red-800 text-white px-4 py-2 rounded-md ml-auto hover:bg-transparent" >Para2</button>
+    </div>
+    <div id="pdfcontent"></div>
+</div>
+</body>
+</html>

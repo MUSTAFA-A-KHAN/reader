@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Parent Page</title>
+  <script src="https://unpkg.com/htmx.org"></script>
+</head>
+<body>
+  <h1>Parent Page</h1>
+  <button hx-get="child.html" hx-target="#child-content" hx-swap="innerHTML">
+    Load Child Page
+  </button>
+  <div id="child-content">
+    <!-- Child page content will be loaded here -->
+  </div>
+</body>
+</html>
